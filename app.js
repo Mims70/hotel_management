@@ -2,7 +2,6 @@ require('dotenv').config();
 
 const express = require('express');
 const expressLayout = require('express-ejs-layouts')
-const routes = require("./routes/index");
 
 const connectDB = require('./server/config/db');
 
@@ -49,7 +48,7 @@ app.post('/api/v1/rooms-types', async (req, res) => {
     res.status(201).json(roomType);
   } catch (error) {
     res.status(500).json({ error: error.message });
-  } 
+  }
 });
 
 // GET Endpoint for Fetching All Room Types
