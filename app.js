@@ -48,7 +48,7 @@ app.post('/api/v1/rooms-types', async (req, res) => {
     res.status(201).json(roomType);
   } catch (error) {
     res.status(500).json({ error: error.message });
-  }
+  } 
 });
 
 // GET Endpoint for Fetching All Room Types
