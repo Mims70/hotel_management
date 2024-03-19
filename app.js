@@ -1,20 +1,28 @@
 require('dotenv').config();
 
 const express = require('express');
+const expressLayout = require('express-ejs-layouts')
+
+const connectDB = require('./server/config/db');
+
 const mongoose = require('mongoose');
 
 const app = express();
-const PORT = process.env.PORT || 3500;
+const PORT = 5000 || process.env.PORT;
+
+//Connect Database
+connectDB();
+
+app.use(express.static('public'));
+
+//Template engine
+app.use(expressLayout);
+app.set('layout', './layouts/main');
+app.set('view engine', 'ejs');
 
 // Middleware
 app.use(express.json());
 
-// MongoDB Connection
-
-  const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://hotelmanagement:Gj8J8KmmkENFlFzy@cluster0.bwak1ll.mongodb.net/?retryWrites=true&w=majority";
-
-// Define Schema for Room Type
 const roomTypeSchema = new mongoose.Schema({
   name: String
 });
