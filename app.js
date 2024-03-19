@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const express = require('express');
 const expressLayout = require('express-ejs-layouts')
+const routes = require("./routes/index");
 
 const connectDB = require('./server/config/db');
 
