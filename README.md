@@ -38,9 +38,9 @@ This Node.js API provides user authentication functionality using JSON Web Token
 The User Authentication API allows users to authenticate using their username and password. Upon successful authentication, the API issues a JSON Web Token (JWT) which can be used for subsequent requests requiring authentication.
 
 
-To access the endpoint you can use the deployed link: [Link text](https://hotel-management-2.onrender.com/)
+To access the endpoint you can use the deployed link: [https://hotel-management-2.onrender.com/]
 
-You'll have to login first with provided username and password using [Link text](https://hotel-management-2.onrender.com/api/v1/login)
+You'll have to login first with provided username and password using [https://hotel-management-2.onrender.com/api/v1/login]
  ```javascript
  const users = [
     { id: 1, username: 'Mims', password: 'Dembele', role: 'user' },
